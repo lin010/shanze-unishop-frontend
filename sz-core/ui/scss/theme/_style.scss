@@ -1,0 +1,51 @@
+@import './_light'; //浅蓝主题
+@import './_dark'; //深蓝主题
+
+
+// 多主题
+.theme-light {
+	@include theme-light;
+}
+.theme-dark {
+	@include theme-dark;
+}
+.theme-auto {
+	@include theme-light;
+}
+@media (prefers-color-scheme: dark) {
+	.theme-auto {
+		@include theme-dark;
+	}
+}
+@each $value in ('', '-1', '-2', '-3', '-4') {
+	.sz-BG#{$value} {
+		background-color: var(--sz-BG#{$value}) !important;
+		color: var(--sz-TC);
+	}
+	.sz-TC#{$value} {
+		color: var(--sz-TC#{$value}) !important;
+	}
+	.sz-BG-Main#{$value} {
+		background-color: var(--sz-BG-Main#{$value}) !important;
+		color: var(--sz-BG-Main-TC) !important;
+	}
+	.sz-TC-Main#{$value} {
+		color: var(--sz-BG-Main#{$value}) !important;
+	}
+}
+@each $color, $value in $colors {
+	.main-#{$color} {
+		--sz-BG-Main: #{$value};
+		--sz-BG-Main-1: #{mix(rgba(255, 255, 255, 0.7), desaturate($value, 20%), 10%)};
+		--sz-BG-Main-2: #{mix(rgba(255, 255, 255, 0.6), desaturate($value, 40%), 20%)};
+		--sz-BG-Main-3: #{mix(rgba(119, 119, 119, 0.2), desaturate($value, 40%), 40%)};
+		--sz-BG-Main-4: #{mix(rgba(119, 119, 119, 0.1), desaturate($value, 40%), 60%)};
+		
+		@if $color == 'yellow' {
+			--sz-BG-Main-TC: #333333 !important;
+		} @else {
+			--sz-BG-Main-TC: #ffffff !important;
+		}
+		
+	}
+}

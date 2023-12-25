@@ -1,0 +1,40 @@
+.sz-menu{
+	background-color: var(--sz-BG);
+}
+
+.sz-menu-item {
+	position: relative;
+	@include flex-bar;
+	min-height: 4em;
+	padding: 0 30rpx;
+	.sz-menu-item-icon {
+		width: 1.7em;
+		margin-right: 0.3em;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: scale(1.3);
+	}
+	.sz-menu-item-icon .sz-menu-item-image {
+		width: 1.2em;
+		height: 1.2em;
+		display: inline-block;
+	}
+	.sz-menu-item-content {
+		flex: 1;
+		position: relative;
+		@include flex-bar;
+	}
+	.sz-menu-item-arrow {
+		width: 1.6em;
+		text-align: center;
+		color: var(--sz-TC-3);
+	}
+	&.first-item::after {
+		display: none;
+	}
+	&:first-child::after{
+		display: none;
+	}
+}

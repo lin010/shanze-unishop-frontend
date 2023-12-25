@@ -1,0 +1,106 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},{
+            "path" : "pages/category/category",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/cart/cart",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/order/pay",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/order/detail",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/user/user",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/user/dingdan",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/user/tuihuo",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/address/user-address/user-address",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+            "path" : "pages/address/address",
+            "style" : {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },{
+			"path": "pages/product/detail",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		}
+    ],
+	"easycom": {
+		"sz-(.*)": "@/sz-core/ui/components/sz-$1/sz-$1.vue"
+	},
+	"tabBar": {
+		"color": "#959595",
+		"selectedColor": "#118fff",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": " "
+			},
+			{
+				"pagePath": "pages/category/category",
+				"text": " "
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": " "
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"text": " "
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
